@@ -21,6 +21,7 @@
 
 syntax = "proto2";
 
+option go_package = "github.com/outboundani/phonenumbers";
 option optimize_for = LITE_RUNTIME;
 
 option java_package = "com.google.i18n.phonenumbers";

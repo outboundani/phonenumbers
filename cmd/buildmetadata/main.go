@@ -20,8 +20,8 @@ import (
 
 	"bytes"
 
-	"github.com/golang/protobuf/proto"
-	"github.com/nyaruka/phonenumbers"
+	"github.com/outboundani/phonenumbers"
+	"google.golang.org/protobuf/proto"
 )
 
 type prefixBuild struct {
