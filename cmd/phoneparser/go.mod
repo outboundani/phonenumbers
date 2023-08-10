@@ -1,12 +1,11 @@
-module github.com/outboiundani/phonenumbers/cmd/phoneparser
+module github.com/outboundani/phonenumbers/cmd/phoneparser
 
 go 1.19
 
-replace github.com/nyaruka/phonenumbers => ../../
-
-require github.com/nyaruka/phonenumbers v1.1.7
+require github.com/outboundani/phonenumbers v1.0.0
 
 require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	golang.org/x/text v0.12.0 // indirect
+	google.golang.org/protobuf v1.31.0 // indirect
 )
