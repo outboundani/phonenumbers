@@ -1,11 +1,9 @@
 module github.com/outboundani/phonenumbers/cmd/buildmetadata
 
-go 1.20
-
-replace github.com/outboundani/phonenumbers => ../..
+go 1.21
 
 require (
-	github.com/outboundani/phonenumbers v0.0.0-00010101000000-000000000000
+	github.com/outboundani/phonenumbers v1.1.0
 	google.golang.org/protobuf v1.31.0
 )
 
