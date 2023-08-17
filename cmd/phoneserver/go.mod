@@ -1,12 +1,10 @@
 module github.com/nyaruka/phonenumbers/cmd/phoneserver
 
-go 1.19
-
-replace github.com/outboundani/phonenumbers => ../../
+go 1.21
 
 require (
-	github.com/aws/aws-lambda-go v1.13.1
-	github.com/outboundani/phonenumbers v0.0.0-00010101000000-000000000000
+	github.com/aws/aws-lambda-go v1.41.0
+	github.com/outboundani/phonenumbers v1.1.0
 )
 
 require (
