@@ -9,52 +9,52 @@ import (
 type Record struct {
 
 	// International format is the usual +countrycode<number> format
-	International string
+	International string `json:"international""`
 
 	// NType is the type of number, e.g. fixed line, mobile, toll free etc
-	NType PhoneNumberType
+	NType PhoneNumberType `json:"type"`
 
 	// Geocode is usually the town or city where the number is registered, including the Admin1 level such as state or province
-	Geocode string
+	Geocode string `json:"geocode"`
 
 	// Timezone is the timezone of the number
-	Timezone string
+	Timezone string `json:"timezone"`
 
 	// Region is usually the country, though some countries have more than one region
-	Region string
+	Region string `json:"region"`
 
 	// The language used to return the geocode and region etc
-	Language string
+	Language string `json:"language"`
 
 	// Country code is the + prefix for a number
-	CountryCode string
+	CountryCode string `json:"country_code"`
 
 	// NDC is the National Destination Code, which is the area code for the number in the US for instance but
 	// varies a little nation to nation
-	NDC string
+	NDC string `json:"ndc"`
 
 	// LDC is the Local Destination Code, which is the local exchange code for the number in the US for instance but
 	// is not always present, for instance UK numbers only have teh Local field
-	LDC string
+	LDC string `json:"ldc, omitempty"`
 
 	// Local is the local part of the number, which is the subscriber number (last three digits) in the US for instance
 	// but is the whole of hte non NDC part of the number for many countries such as the UK
-	Local string
+	Local string `json:"local"`
 
 	// Carrier is the name of the carrier for the number if we can work this out. This is not always possible
-	Carrier string
+	Carrier string `json:"carrier"`
 
 	// E164 is the number in E164 format, which is the international format without the + prefix and is often used for
 	// storage keys
-	E164 string
+	E164 string `json:"e164"`
 
 	// Valid indicates whether the phone parser thinks that this is a valid number for the give region or not
-	Valid bool
+	Valid bool `json:"valid"`
 }
 
 // ParsePhone takes a phone number in national or international format and returns a Record containing all the data we have
 // about this phone number. This includes the international format, the type of number, the geocoded location, the timezone
-// etc,
+// etc.
 //
 // Note that the region parameter is usually the country code in 2 character format, but some countries have more than one
 // region; it defaults to "US".
